@@ -1,0 +1,96 @@
+<html>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
+body
+{
+  width:100%;
+  margin:0px;
+  color:black;
+  background-image: url("https://tse1.mm.bing.net/th?id=OIP.5-TdvpPD8OVZHBoIrks4wwHaE5&pid=Api&P=0");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+.header{
+top:0;
+width:100%;
+height:90px
+font-family: 'Balsamiq Sans', cursive;
+font-size:25px;
+font-weight:800px;
+text-align: center;
+}
+.MAIN  p,label{
+ font-size:20px;
+ margin-left:20px;
+  font-family: 'Balsamiq Sans', cursive;
+}
+.MAIN  input,select
+{
+height:30px;
+width:200px;
+}
+.MAIN button
+{
+height:30px;
+width:200px;
+margin-left:60px;
+background-color: aqua;
+}
+.MAIN b{
+font-size:20px;
+font-weight:800px;
+text-align:center;
+font-family: 'Balsamiq Sans', cursive;
+margin-left:20px;
+}
+
+</style>
+<body align="center">
+<div class="header"><br>
+<h1>Prediction of Flight Delay</h1>
+</div>
+<div class="MAIN">
+<form action = "http://localhost:5000/prediction" method = "post">
+
+<p> Enter the Flight Number :<span><input type = "text" name = "name"/></span></p>
+
+<p> Month :<span><input type = "text" name = "month"/></span></p>
+
+<p> Day of Month :<span><input type = "text" name = "dayofmonth"/></span></p>
+
+<p> Day of Week :<span><input type = "text" name = "dayofweek"/></span></p>
+
+<label for = "origin">origin</label>
+<select name = "origin">
+<option value = "msp">MSP</option>
+<option value = "dtw">DTW</option>
+<option value = "jfk">JFK</option>
+<option value = "sea">SEA</option>
+<option value = "alt">ATL</option>
+</select>
+<br><br>
+<label for = "destination">destination</label>
+<select name = "destination">
+<option value = "msp">MSP</option>
+<option value = "dtw">DTW</option>
+<option value = "jfk">JFK</option>
+<option value = "sea">SEA</option>
+<option value = "alt">ALT</option>
+</select>
+
+<p> Scheduled Departure Time  :<span><input type = "text" name = "dept"/></span></p>
+
+<p> Scheduled Arrival Time :<span><input type = "text" name = "arrtime"/></span></p>
+
+<p> Actual Departure Time  :<span><input type = "text" name = "actdept"/></span></p>
+
+
+<button type="submit" >SUBMIT</button>
+</form>
+<b>{{showcase}}</b>
+
+</div>
+</body>
+</html>
